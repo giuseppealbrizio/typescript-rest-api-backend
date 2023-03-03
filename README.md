@@ -8,6 +8,14 @@
 
 # Typescript REST API Backend Template
 
+## Feel free to support this project
+
+If you found this project helpful, please consider supporting me by buying me a coffee! Your support will help me to keep creating more useful content and improving this project.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/galbrizio)
+
+---
+
 #### Typescript REST microservice boilerplate using node.js and express and some other cool stuff
 
 This template is intended to be used as single service in a REST multi-service application using Cloud Pub/Sub as
