@@ -1,4 +1,4 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giuseppealbrizio/express-typescript-rest-api/tree/main.svg?style=svg&circle-token=6a866397a72b071d013d7c3fad96847dbb87149f)](https://dl.circleci.com/status-badge/redirect/gh/giuseppealbrizio/express-typescript-rest-api/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giuseppealbrizio/typescript-rest-api-backend/tree/main.svg?style=svg&circle-token=a73f0879b6f17258a912820c3082a572d49d4ff6)](https://dl.circleci.com/status-badge/redirect/gh/giuseppealbrizio/typescript-rest-api-backend/tree/main)
 
 [![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
