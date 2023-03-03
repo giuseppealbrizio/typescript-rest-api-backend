@@ -6,7 +6,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://github.com/Envoy-VC/awesome-badges)
 [![Kubernets](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://github.com/Envoy-VC/awesome-badges)
 
-# Express Typescript Rest API
+# Typescript REST API Backend Template
 
 #### Typescript REST microservice boilerplate using node.js and express and some other cool stuff
 
