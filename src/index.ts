@@ -87,7 +87,7 @@ app.use(cookieParser());
 // Cookie policy definition
 const COOKIE_MAX_AGE: string | number =
   process.env.COOKIE_MAX_AGE || 1000 * 60 * 60 * 24;
-const SECRET = process.env.JWT_KEY || 'your_jwt_secret';
+const SECRET = <string>process.env.JWT_KEY;
 
 /**
  * FIX:
