@@ -1,10 +1,17 @@
 import express, {Response} from 'express';
 import _ from 'lodash';
 import {ICustomExpressRequest} from '../../middlewares/currentUser.middleware';
+
 import appRouter from './app/app.route';
+import authRouter from './auth/auth.route';
+
 import swaggerRouter from './swagger/swagger.route';
 import typedocRouter from './typedoc/typedoc.route';
-import authRouter from './auth/auth.route';
+
+import {
+  apiV1RateLimiter,
+  devlopmentApiLimiter,
+} from '../../middlewares/apiRateLimit.middleware';
 
 const apiV1Router = express.Router();
 
@@ -38,11 +45,13 @@ const devRoutes = [
 ];
 
 _.forEach(defaultRoutes, route => {
+  apiV1Router.use(apiV1RateLimiter);
   apiV1Router.use(route.path, route.route);
 });
 
 if (process.env.NODE_ENV === 'development') {
   _.forEach(devRoutes, route => {
+    apiV1Router.use(devlopmentApiLimiter);
     apiV1Router.use(route.path, route.route);
   });
 }
