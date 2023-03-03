@@ -1,7 +1,7 @@
 {
-  "name": "express-typescript-rest-api",
+  "name": "typescript-rest-api-backend",
   "version": "1.0.0",
-  "description": "express typescript template",
+  "description": "Express Typescript Rest API backend template with full TS support following gts style guide and gke integration",
   "main": "src/index.ts",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development nodemon ./src/bin/server",
