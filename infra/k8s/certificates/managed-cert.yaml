@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: project-id-certificate
+spec:
+  domains:
+    - domainname.com
+    - api.domainname.com
