@@ -7,6 +7,7 @@ import {
   generateOTP,
   generateCookie,
   generateJsonWebToken,
+  JwtPayload,
 } from '../../../src/utils/generators.utils';
 
 // Mock process.env.JWT_KEY with a string value
@@ -22,12 +23,11 @@ describe('Generators Utilities Tests Suite', () => {
 
   describe('generateJsonWebToken', () => {
     it('should generate a JWT token', () => {
-      const payload = {username: 'user1'};
+      const payload = {id: 1, username: 'user1'};
       const token = generateJsonWebToken(payload);
-      const decoded = jwt.verify(
-        token,
-        <string>process.env.JWT_KEY
-      ) as jwt.JwtPayload;
+      const decoded = jwt.verify(token, process.env.JWT_KEY!) as JwtPayload<
+        typeof payload
+      >;
       expect(decoded.payload).toEqual(payload);
     });
   });

@@ -3,12 +3,15 @@ import {ICustomExpressRequest} from '../middlewares/currentUser.middleware';
 import {Response} from 'express';
 import jwt from 'jsonwebtoken';
 
+export interface JwtPayload<T> {
+  [key: string]: T;
+}
 /**
  * Generate a json web token
  * @param payload
  * @returns
  */
-const generateJsonWebToken = (payload: object): string => {
+const generateJsonWebToken = <T>(payload: JwtPayload<T>): string => {
   const jwtKey = process.env.JWT_KEY;
 
   if (!jwtKey) {
