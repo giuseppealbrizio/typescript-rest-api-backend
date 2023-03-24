@@ -8,6 +8,12 @@ import {HydratedDocument} from 'mongoose';
 const pubSubClient = new PubSub();
 
 /**
+ * declare custom payload interface
+ */
+export interface IPubSubPayload<T> {
+  [key: string]: T;
+}
+/**
  * declare custom error interface
  */
 export interface IPubSubPublishError extends Error {
@@ -35,8 +41,8 @@ class PubSubPublishError extends Error implements IPubSubPublishError {
  * @param topicName
  * @returns
  */
-const publishMessageToPubSubTopic = async (
-  payload: object,
+const publishMessageToPubSubTopic = async <T>(
+  payload: IPubSubPayload<T>,
   topicName: string
 ): Promise<string> => {
   try {
