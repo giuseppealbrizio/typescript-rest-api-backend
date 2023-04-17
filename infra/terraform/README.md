@@ -10,3 +10,15 @@ project     = "development-test-skeldon"
 environment = "prod"
 app_name    = "test-rest-api-app"
 ```
+
+Then run terraform commands as usual.
+
+## Terraform commands could be:
+
+```bash
+terraform init # only the first time
+terraform fmt # to format the code
+terraform validate # to validate the code
+terraform plan # to see what will be created
+terraform apply # to create the infrastructure
+```
