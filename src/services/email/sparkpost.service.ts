@@ -6,9 +6,18 @@ import Logger from '../../lib/logger';
  * Send reset password token to user email
  * @param email
  * @param token
- * @returns
+ * @returns Promise<SparkPost.ResultsPromise<{ total_rejected_recipients: number; total_accepted_recipients: number; id: string; }>>
  */
-const sendResetPasswordToken = async (email: string, token: string) => {
+const sendResetPasswordToken = async (
+  email: string,
+  token: string
+): Promise<
+  SparkPost.ResultsPromise<{
+    total_rejected_recipients: number;
+    total_accepted_recipients: number;
+    id: string;
+  }>
+> => {
   const {SPARKPOST_API_KEY, SPARKPOST_SENDER_DOMAIN} = process.env;
   try {
     const euClient = new SparkPost(SPARKPOST_API_KEY, {
