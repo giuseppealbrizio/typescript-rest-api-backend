@@ -57,7 +57,7 @@
   "dependencies": {
     "@google-cloud/pubsub": "^3.5.2",
     "@google-cloud/storage": "^6.10.0",
-    "@googlemaps/google-maps-services-js": "^3.3.29",
+    "@googlemaps/google-maps-services-js": "^3.3.30",
     "@hokify/agenda": "^6.3.0",
     "@types/morgan": "^1.9.4",
     "axios": "^1.4.0",
